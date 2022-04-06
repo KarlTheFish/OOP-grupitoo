@@ -1,30 +1,17 @@
-package com.grupitoo.ciphers;
+package com.grupitoo.ciphers.ciphers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import java.lang.StringBuilder;
 
-@RestController
 public class CaesarCipher {
     String text;
     int step;
 
     public CaesarCipher(String text, int step) {
         this.text = text;
-        this.step = step;
-    }
-
-    @GetMapping("caesar/{text}/{step}/{deciphering}")
-    public String getResult(@PathVariable String text, @PathVariable int step, @PathVariable boolean deciphering) {
-        new CaesarCipher(text, step);
-        String newText;
-        if(deciphering) {
-            newText = applyDecipher();
-        } else {
-            newText = applyCipher();
-        }
-        return newText;
+        this.step = step % 26;
     }
 
     private int getAsciiValue(char letter) {
@@ -79,7 +66,7 @@ public class CaesarCipher {
         String decipheredText;
         this.step = decipherNum;
         decipheredText = this.applyCipher();
-        this.step = Math.abs(this.step);
+        this.step = Math.negateExact(this.step);
         return decipheredText;
     }
 }

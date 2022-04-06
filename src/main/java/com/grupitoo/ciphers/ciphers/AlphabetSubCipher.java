@@ -1,4 +1,4 @@
-package com.grupitoo.ciphers;
+package com.grupitoo.ciphers.ciphers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
