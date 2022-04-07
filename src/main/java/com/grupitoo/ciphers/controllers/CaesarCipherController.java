@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CaesarCipherController {
     CaesarCipher cipherObject;
 
-    @GetMapping("caesar/{text}/{step}/{deciphering}")
+    @GetMapping("caesarcipher/{text}/{step}/{deciphering}")
     public String getResult(@PathVariable String text, @PathVariable int step, @PathVariable boolean deciphering) {
         cipherObject = new CaesarCipher(text, step);
         String newText;
