@@ -6,7 +6,7 @@ import com.grupitoo.ciphers.ciphers.LeetcodeCipher;
 
 public class LeetspeakCipherTests {
     public static void main(String[] args){
-        LeetcodeCipher hi = new LeetcodeCipher("Hello");
-        System.out.println(hi.makeLeet("Get hacked"));
+        LeetcodeCipher hi = new LeetcodeCipher("hi");
+        System.out.println(hi.makeLeet("German techno hardstyle"));
     }
 }
