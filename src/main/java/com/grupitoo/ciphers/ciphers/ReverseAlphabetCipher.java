@@ -20,7 +20,7 @@ public class ReverseAlphabetCipher {
             char letter = input.charAt(i); //take one letter from the input
             int code1 = alphabet.indexOf(Character.toString(letter)); //find the letter's position in the alphabet
             if(code1 != -1){
-                newText = newText.replace(Character.toString(letter), alphabet.get(26 - (code1 + 1)));
+                newText = newText.substring(0, i) + alphabet.get(26 - (code1 + 1)) + newText.substring(i + 1);
             }
         }
         return newText;

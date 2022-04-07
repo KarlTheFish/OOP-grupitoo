@@ -6,6 +6,6 @@ public class ReverseAlphabetCipherTests {
 
     public static void main(String[] args){
         ReverseAlphabetCipher test = new ReverseAlphabetCipher("hi there");
-        System.out.println(test.ReverseAlphabet("Hi there"));
+        System.out.println(test.ReverseAlphabet("r orpv rxv xivzn"));
     }
 }
