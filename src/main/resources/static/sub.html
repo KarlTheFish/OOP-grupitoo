@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tähestiku asenduse sihver</title>
+    <title>Tähestiku asenduse šiffer</title>
     <script src="scripts/sub_script.js" defer></script>
 </head>
 <body>
-<h2>Asendustähestiku sihver</h2>
+<h2>Asendustähestiku šiffer</h2>
 <a href="home.html">Avalehele</a><br><br>
 <label>
     Tekst<br>
@@ -14,12 +14,14 @@
 </label>
 <label>
     Asendustähestik<br>
-    <input id="sub" type="text"><br>
+    <i style="color:gray;">Ehk A-täht asendub siin antud esimese tähega, B teisega, jne.</i><br>
+    <input id="sub" type="text">
 </label>
+<div id="letterAmount">0 tähte</div><br>
 <label>
-    <input  id="decipher" type="checkbox"> Desihvreeri?<br>
+    <input  id="decipher" type="checkbox"> Dešifreeri?<br>
 </label><br>
-<button id="submit">Kasuta sihvrit</button>
-<p id="result">Siia tuleb sihvri tulemus.</p>
+<button id="submit">Kasuta šifrit</button>
+<p id="result">Siia tuleb šifri tulemus.</p>
 </body>
 </html>
